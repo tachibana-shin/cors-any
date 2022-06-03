@@ -1,4 +1,5 @@
 import cookieParser from "cookie-parser"
+// eslint-disable-next-line n/no-unpublished-import
 import cors from "cors"
 import { boot } from "epact"
 import { json, urlencoded } from "express"
