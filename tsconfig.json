@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "ESNext",
+    "declaration": true,
+    //  "outDir": "./src" /* Redirect output structure to the directory. */,
+    "strict": true,
+    "declarationDir": "types",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ],
+      "epact:app": ["./.express/main.ts"],
+      "virual:app": ["./.express/main.ts"]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
