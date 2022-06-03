@@ -7,7 +7,7 @@
     "start": "node dist/main.js",
     "dev": "epact dev",
     "build:epact": "epact build",
-    "build": "sh ./deploy-vercel.sh",
+    "build:vercel": "sh ./deploy-vercel.sh",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "test": "vitest run",
