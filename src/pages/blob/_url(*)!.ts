@@ -1,5 +1,8 @@
 import axios from "axios"
 import { page } from "epact"
+import { Headers as HeadersPolyfill } from "headers-polyfill"
+
+const Headers = "Headers" in global ? global.Headers : HeadersPolyfill
 
 function isUrlHttp(str: string): boolean {
   return !!/https?:\/{2}/.test(str)
@@ -33,7 +36,6 @@ export default page({
     const requestQueries = Object.fromEntries(
       Object.entries(req.query).filter(([name]) => !name.startsWith("cs-"))
     )
-    // eslint-disable-next-line no-undef
     const requestHeaders = new Headers(
       inheritHeaders === false
         ? undefined

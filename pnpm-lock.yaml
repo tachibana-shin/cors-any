@@ -22,6 +22,7 @@ specifiers:
   eslint: ^8.16.0
   esm-loader-fix: 0.0.7
   express: ^4.18.1
+  headers-polyfill: ^3.0.7
   helmet: ^5.1.0
   http-errors: ^2.0.0
   morgan: ^1.10.0
@@ -37,6 +38,7 @@ dependencies:
   dotenv: 16.0.1
   epact: 0.0.9-beta.23
   express: 4.18.1
+  headers-polyfill: 3.0.7
   helmet: 5.1.0
   http-errors: 2.0.0
   morgan: 1.10.0
@@ -2033,6 +2035,10 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+
+  /headers-polyfill/3.0.7:
+    resolution: {integrity: sha512-JoLCAdCEab58+2/yEmSnOlficyHFpIl0XJqwu3l+Unkm1gXpFUYsThz6Yha3D6tNhocWkCPfyW0YVIGWFqTi7w==}
+    dev: false
 
   /helmet/5.1.0:
     resolution: {integrity: sha512-klsunXs8rgNSZoaUrNeuCiWUxyc+wzucnEnFejUg3/A+CaF589k9qepLZZ1Jehnzig7YbD4hEuscGXuBY3fq+g==}
