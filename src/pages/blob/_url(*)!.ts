@@ -4,6 +4,8 @@ import { Headers as HeadersPolyfill } from "headers-polyfill"
 
 const Headers = "Headers" in global ? global.Headers : HeadersPolyfill
 
+const headersSkip = ["host", "access-control-allow-origin"]
+
 function isUrlHttp(str: string): boolean {
   return !!/https?:\/{2}/.test(str)
 }
@@ -56,7 +58,7 @@ export default page({
     // set headers
     if (appendResponseHeaders !== false) {
       for (const [name, value] of Object.entries(response.headers)) {
-        if (name.toLowerCase() === "host") continue
+        if (headersSkip.includes(name.toLowerCase())) continue
         res.append(name, value)
       }
     }
